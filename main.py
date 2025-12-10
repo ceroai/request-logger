@@ -78,7 +78,7 @@ async def catch_all(request: Request, path_name: str):
     """
     Catches all requests and returns a simple success message.
     """
-    return PlainTextResponse(content="{\"sucess\": \"True\"}", status_code=200)
+    return JSONResponse(content={"success": True}, status_code=200)
 
 
 if __name__ == "__main__":
